@@ -33,17 +33,65 @@ $faq = [
     ]
 ];
 
-var_dump($faq);
+// var_dump($faq);
 
 
-foreach ($faq as $info) {
-    echo $info['question'];
-    echo '<br>';
-    echo $info['answer'];
-    echo "<br><br>";
-}
-
-
-
+// foreach ($faq as $info) {
+//     echo $info['question'];
+//     echo '<br>';
+//     echo $info['answer'];
+//     echo "<br><br>";
+// }
 
 ?>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Php Google Faq</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header class="clearfix">
+            <div class="header-top">
+                <div class="logo">
+                    <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_74x24dp.png" alt="">
+                </div>
+                <div class="title">
+                    <h1>Privacy e termini</h1>
+                </div>
+            </div>
+            <div class="header-bottom">
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">Introduzione</a></li>
+                        <li><a href="#">Norme sulla privacy</a></li>
+                        <li><a href="#">Termini di servizio</a></li>
+                        <li><a href="#">Tecnologie</a></li>
+                        <li><a class="active" href="#">Domande frequenti</a></li>
+                    </ul>
+                </div>
+                <div class="account">
+                    <a href="#">Account google</a>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container clearfix">
+                <div class="faq">
+                    <?php foreach ($faq as $info) { ?>
+                        <h3>
+                            <?php
+                            echo $info['question'];?>
+                        </h3>
+                        <p>
+                            <?php echo $info['answer']; }?>
+                        </p>
+
+
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
